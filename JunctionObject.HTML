@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <template if:true={records.data}>
+            <lightning-datatable
+                key-field="id"
+                data={records.data}
+                columns={columns}>
+            </lightning-datatable>
+            <lightning-button label="Create Selected" onclick={createSelected}></lightning-button>
+        </template>
+        <template if:true={records.error}>
+               <!-- <c-error-panel errors={records.error}></c-error-panel>-->
+        </template>
+    </lightning-card>
+</template>
